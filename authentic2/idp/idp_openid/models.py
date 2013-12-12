@@ -17,7 +17,7 @@ from authentic2.saml.fields import PickledObjectField
 def utctimestamp_to_aware_datetime(tst):
     if settings.USE_TZ:
         return datetime.datetime.utcfromtimestamp(tst) \
-                .replace(tz_info=utc)
+                .replace(tzinfo=utc)
     else:
         return datetime.datetime.utcfromtimestamp(tst)
 
